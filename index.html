@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">David.dev</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="assets/img/CVV_Image2.png" alt="hero">
+            </div>
+            <h1>DAVID HERRERA</h1>
+            <h2>Frontend Developer<br>Software Analyst and Developer</h2>
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/david-herrera-519514266/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/DauidH" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:[julianherrera0002@gmail.com]"><i class="fa-brands fa-google"></i></a>
+                <!-- <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-solid fa-rss"></i></a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p>Hola, soy <span>David Herrera,</span> desarrollador con alto contenido humano y buenas relaciones interpersonales, con conocimientos en lenguajes de
+                programación, programación orientada a objetos, git, desarrollo Backend y Frontend, bases de datos y arquitectura en la nube. Preparado para enfrentar desafíos técnicos y contribuir al éxito del equipo. Presenta habilidades de multitasking, trabajo en equipo y aprendizaje continuo para una escalabilidad constante.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                 <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Fecha de Nacimiento</strong>
+                            10-07-2000
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            315 694 0206
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            julianherrera0002@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            https://dauidh.github.io/
+                        </li>
+                        <li>
+                            <strong>Ubicación</strong>
+                            Bogotá, Colombia
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>FREELANCE</span>  
+                        </li>
+                    </ul>
+                 </div>
+
+                 <!-- intereses -->
+                  <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-futbol"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>APRENDER</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span>AMIGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-motorcycle"></i>
+                            <span>MOTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-clapperboard"></i>
+                            <span>PELICULAS</span>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <button>
+                <a href="assets/doc/CVV_David_Herrera.pdf" target="_blank">Descargar CVV <i class="fa-solid fa-download"></i></a>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>JavaScript & TypeScript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>89%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Angular</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Node.js & Express</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>68%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>PostgreSQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>82%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>88%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Project Management</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación Principal</h3>
+                    <div class="item izq">
+                        <h4>Tecnólogo: Análisis y Desarrollo de Software</h4>
+                        <span class="casa">SENA: Servicio Nacional de Aprendizaje</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed nihil consequuntur nisi aperiam at facilis alias similique quam vel suscipit laudantium illum in aliquid veniam sit, porro est voluptatum possimus.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Especialización: Inteligencia Artificial</h4>
+                        <span class="casa">Fundación Universitaria Internacional de la Rioja</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed nihil consequuntur nisi aperiam at facilis alias similique quam vel suscipit laudantium illum in aliquid veniam sit, porro est voluptatum possimus.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Pregrado: Música con enfásis en Producción Musical</h4>
+                        <span class="casa">Universidad Sergio Arboleda</span>
+                        <span class="fecha">2017 - 2023</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed nihil consequuntur nisi aperiam at facilis alias similique quam vel suscipit laudantium illum in aliquid veniam sit, porro est voluptatum possimus.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia Laboral</h3>
+                    <div class="item der">
+                        <h4>Ejecutivo Call Center</h4>
+                        <span class="casa">Atento</span>
+                        <span class="fecha">Abril 2023 - Octubre 2023</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed nihil consequuntur nisi aperiam at facilis alias similique quam vel suscipit laudantium illum in aliquid veniam sit, porro est voluptatum possimus.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Coordinador de Eventos</h4>
+                        <span class="casa">People Security S.A.S</span>
+                        <span class="fecha">Enero 2018 - Enero 2023</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed nihil consequuntur nisi aperiam at facilis alias similique quam vel suscipit laudantium illum in aliquid veniam sit, porro est voluptatum possimus.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Crew</h4>
+                        <span class="casa">McDonald's</span>
+                        <span class="fecha">Junio 2019 - Agosto 2019</span>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed nihil consequuntur nisi aperiam at facilis alias similique quam vel suscipit laudantium illum in aliquid veniam sit, porro est voluptatum possimus.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>Portafolio</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="./assets/img/p1.png" alt="">
+                    <div class="overlay">
+                        <h3>Street Cat Fighter</h3>
+                        <p>Juego HTML</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./assets/img/p2.png" alt="">
+                    <div class="overlay">
+                        <h3>Task Check</h3>
+                        <p>App Gestión de Tareas</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./assets/img/p3.png" alt="">
+                    <div class="overlay">
+                        <h3>Kontrol Inv</h3>
+                        <p>App Control de Inventarios</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>Contacto</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <form id="miFormulario" onsubmit="submitAndResetForm(event)">
+                        <input type="text" placeholder="Escribe tu nombre" required>
+                        <input type="number" placeholder="Escribe tu número Telefónico" required>
+                        <input type="email" placeholder="Escribe tu correo electrónico" required>
+                        <input type="text" placeholder="Escribe un tema" required>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Redacta un mensaje" required></textarea>
+                        <button type="submit">
+                            Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </form>
+                </div>
+                <!-- Mapa -->
+                 <div class="col">
+                    <img src="./assets/img/ubicacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Bogotá, Colombia
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                315 694 0206
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                julianherrera0002@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+     <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/david-herrera-519514266/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/DauidH" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:[julianherrera0002@gmail.com]"><i class="fa-brands fa-google"></i></a>
+            <!-- <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-rss"></i></a> -->
+        </div>
+     </footer>
+
+     <script src="assets/js/main.js"></script>
+</body>
+</html>
