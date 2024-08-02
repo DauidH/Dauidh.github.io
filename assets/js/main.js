@@ -28,11 +28,16 @@ function efectoHabilidades() {
         habilidades[2].classList.add("angular");
         habilidades[3].classList.add("node");
         habilidades[4].classList.add("postgre");
-        habilidades[5].classList.add("comunicacion");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("project");
+        habilidades[5].classList.add("git");
+        habilidades[6].classList.add("python");
+        habilidades[7].classList.add("java");
+        habilidades[8].classList.add("bootstrap");
+        habilidades[9].classList.add("aws");
+        habilidades[10].classList.add("comunicacion");
+        habilidades[11].classList.add("trabajo");
+        habilidades[12].classList.add("creatividad");
+        habilidades[13].classList.add("dedicacion");
+        habilidades[14].classList.add("project");
     }
 }
 

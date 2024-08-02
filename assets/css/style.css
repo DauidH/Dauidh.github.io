@@ -154,7 +154,7 @@ html {
 .sobremi .fila .col ul li strong {
     display: inline-block;
     color: #1CB698;
-    width: 130px;
+    width: 170px;
 }
 .sobremi .fila .col ul li span {
     background-color: #1CB698;
@@ -235,9 +235,26 @@ html {
 .skills .fila {
     display: flex;
 }
-.skills .fila .col {
-    width: 50%;
-    padding: 0 20px;
+.skills .fila .col.tech {
+    flex: 2;
+    padding-left: 20px;
+}
+.skills .fila .col.tech h3{
+    display: flex;
+    justify-content: center;
+}
+.skills .fila .col.tech .skill-block {
+    display: flex;
+}
+.skills .fila .col.prof {
+    flex: 1;
+    padding-right: 20px;
+}
+.skills .fila .col-tech1 {
+    width: 100%;
+}
+.skills .fila .col-tech2 {
+    width: 100%;
 }
 .skills .fila .col h3 {
     font-size: 28px;
@@ -315,6 +332,46 @@ html {
 @keyframes postgre {
     0%{width: 0%;}
     100%{width: 80%}
+}
+.skills .skill .git {
+    width: 0%;
+    animation: 2s git forwards;
+}
+@keyframes git {
+    0%{width: 0%;}
+    100%{width: 84%}
+}
+.skills .skill .python {
+    width: 0%;
+    animation: 2s python forwards;
+}
+@keyframes python {
+    0%{width: 0%;}
+    100%{width: 79%}
+}
+.skills .skill .java {
+    width: 0%;
+    animation: 2s java forwards;
+}
+@keyframes java {
+    0%{width: 0%;}
+    100%{width: 68%}
+}
+.skills .skill .bootstrap {
+    width: 0%;
+    animation: 2s bootstrap forwards;
+}
+@keyframes bootstrap {
+    0%{width: 0%;}
+    100%{width: 69%}
+}
+.skills .skill .aws {
+    width: 0%;
+    animation: 2s aws forwards;
+}
+@keyframes aws {
+    0%{width: 0%;}
+    100%{width: 54%}
 }
 .skills .skill .comunicacion {
     width: 0%;
@@ -492,6 +549,10 @@ html {
     height: fit-content;
     margin: 10px;
     cursor: pointer;
+}
+.portfolio .galeria .proyecto a {
+    text-decoration: none;
+    color: #fff;
 }
 .portfolio .galeria .proyecto img {
     width: 100%;
@@ -685,17 +746,36 @@ footer .arriba:hover {
     }
 }
 @media screen and (max-width:700px) {
+    h3 {
+        display: flex;
+        justify-content: center;
+    }
     .sobremi .fila{
         display: block;
     }
     .sobremi .fila .col {
         width: fit-content;
+        display: contents;
+    }
+    .sobremi .fila .col .contenedor-intereses {
+        justify-content: center;
+    }
+    .sobremi .fila .col ul li strong {
+        width: 210px;
     }
     .skills .fila {
         display: block;
     }
     .skills .fila .col {
         width: 100%;
+        padding: 0 20px;
+    }
+    .skills .fila .col h3 {
+        display: flex;
+        justify-content: center;
+    }
+    .skills .fila .col.tech .skill-block {
+        display: block;
     }
     .skills .fila .col .barra-skill {
         width: 100%;
