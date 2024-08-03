@@ -249,6 +249,8 @@ html {
 .skills .fila .col.prof {
     flex: 1;
     padding-right: 20px;
+    padding-left: 25px;
+    border-left: 2px solid #1e2326;
 }
 .skills .fila .col-tech1 {
     width: 100%;
@@ -428,6 +430,73 @@ html {
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
+}
+.curriculum .edu-comp {
+    position: relative;
+}
+.curriculum .edu-comp button {
+    position: absolute;
+    top: -47px;
+    left: 27px;
+    background-color: #1CB698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: 1s;   
+}
+.curriculum .edu-comp button:hover {
+    font-size: 14px;
+}
+.curriculum .edu-comp .edu-comp-vent {
+    visibility: hidden; /* Inicialmente oculto */
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 98;
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Transición suave para la opacidad */
+}
+.curriculum .edu-comp .edu-comp-vent.mostrar {
+    visibility: visible; /* Mostrar el div */
+    opacity: 1; /* Hacer visible el div */
+}
+.curriculum .edu-comp .edu-comp-vent:hover {
+    display: block;
+}
+.curriculum .edu-comp .edu-comp-vent h3 {
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.curriculum .edu-comp .edu-comp-vent .edu-item {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.curriculum .edu-comp .edu-comp-vent .edu-item .casa {
+    color: #1CB698;
+    font-size: 18px;
+    font-weight: bold;
+}
+.curriculum .edu-comp .edu-comp-vent .edu-item .fecha {
+    display: block;
+    color: #fff;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 14px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+.curriculum .edu-comp .edu-comp-vent .edu-item p {
+    font-style: italic;
+    font-size: 15px;
 }
 .curriculum .fila {
     display: flex;
@@ -744,6 +813,10 @@ footer .arriba:hover {
         border-bottom: 1px solid #fff;
         padding: 10px 0;
     }
+    .curriculum .edu-comp button {
+        top: -121px;
+        left: 40%;
+    }
 }
 @media screen and (max-width:700px) {
     h3 {
@@ -774,6 +847,9 @@ footer .arriba:hover {
         display: flex;
         justify-content: center;
     }
+    .skills .fila .col.prof {
+        border-left: 0px;
+    }
     .skills .fila .col.tech .skill-block {
         display: block;
     }
@@ -788,6 +864,15 @@ footer .arriba:hover {
     }
     .curriculum .fila .derecha {
         margin-left: 20px;
+    }
+    .curriculum .edu-comp .edu-comp-vent {
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .curriculum .edu-comp button {
+        top: -121px;
+        left: 34%;
     }
     .portfolio .galeria {
         display: block;
