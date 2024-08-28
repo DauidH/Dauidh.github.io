@@ -598,6 +598,9 @@ html {
     padding: 50px 20px;
 }
 .portfolio .contenido-seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 1100px;
     margin: auto;
 }
@@ -608,12 +611,14 @@ html {
     padding: 20px 0;
 }
 .portfolio .galeria {
+    max-width: 739px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 .portfolio .galeria .proyecto {
     position: relative;
+    min-width: 340px;
     max-width: 340px;
     height: fit-content;
     margin: 10px;
