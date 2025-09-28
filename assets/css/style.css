@@ -720,10 +720,6 @@ html {
 .contacto button:hover .overlay {
     height: 100%;
 }
-.contacto .col img {
-    width: 100%;
-    height: 87%;
-}
 .contacto .col .info {
     position: absolute;
     top: 40%;
@@ -733,7 +729,20 @@ html {
     width: 315px;
     left: 50%;
     transform: translate(-50%, -50%);
+    pointer-events: auto;
+    transition: opacity 1s ease;
 }
+.contacto .col:hover .info {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.contacto .col iframe {
+    border:0;
+    width: 100%;
+    height: 100%;
+}
+
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
