@@ -64,6 +64,105 @@ function mostrarEduComp() {
         eduCompVent.classList.add('mostrar');
     }
 }
+// Galería portfolio: lightbox + navegación de imágenes
+(function initPortfolioGallery() {
+    const lightbox = document.getElementById('portfolio-lightbox');
+    if (!lightbox) return;
+
+    const imgEl = lightbox.querySelector('.lightbox-img');
+    const titleEl = lightbox.querySelector('.lightbox-title');
+    const counterEl = lightbox.querySelector('.lightbox-counter');
+    const prevBtn = lightbox.querySelector('.lightbox-prev');
+    const nextBtn = lightbox.querySelector('.lightbox-next');
+    const projectLink = lightbox.querySelector('.lightbox-project-link');
+    const githubLink = lightbox.querySelector('.lightbox-github-link');
+    const actionsEl = lightbox.querySelector('.lightbox-actions');
+
+    let images = [];
+    let currentIndex = 0;
+    let lastFocus = null;
+
+    function updateLightboxImage() {
+        imgEl.src = images[currentIndex];
+        imgEl.alt = `${titleEl.textContent} - imagen ${currentIndex + 1}`;
+        counterEl.textContent = `${currentIndex + 1} / ${images.length}`;
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === images.length - 1;
+    }
+
+    function openLightbox(card) {
+        images = JSON.parse(card.dataset.images || '[]');
+        if (!images.length) return;
+
+        const overlayTitle = card.querySelector('.overlay h3');
+        titleEl.textContent = overlayTitle ? overlayTitle.textContent : 'Proyecto';
+        currentIndex = 0;
+        updateLightboxImage();
+
+        const link = card.dataset.link;
+        const github = card.dataset.github;
+        if (link) {
+            projectLink.href = link;
+            projectLink.hidden = false;
+        } else {
+            projectLink.hidden = true;
+        }
+        if (github) {
+            githubLink.href = github;
+            githubLink.hidden = false;
+        } else {
+            githubLink.hidden = true;
+        }
+        if (actionsEl) {
+            actionsEl.hidden = !link && !github;
+        }
+
+        lastFocus = document.activeElement;
+        lightbox.hidden = false;
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        lightbox.querySelector('.lightbox-close').focus();
+    }
+
+    function closeLightbox() {
+        lightbox.hidden = true;
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (lastFocus && typeof lastFocus.focus === 'function') {
+            lastFocus.focus();
+        }
+    }
+
+    document.querySelectorAll('.portfolio .proyecto-preview').forEach((btn) => {
+        btn.addEventListener('click', () => openLightbox(btn.closest('.proyecto')));
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateLightboxImage();
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < images.length - 1) {
+            currentIndex++;
+            updateLightboxImage();
+        }
+    });
+
+    lightbox.querySelectorAll('[data-lightbox-close]').forEach((el) => {
+        el.addEventListener('click', closeLightbox);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.hidden) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft' && !prevBtn.disabled) prevBtn.click();
+        if (e.key === 'ArrowRight' && !nextBtn.disabled) nextBtn.click();
+    });
+})();
+
 //funcion del formulario
 function submitAndResetForm(event) {
     event.preventDefault(); // Evita el envío predeterminado del formulario
